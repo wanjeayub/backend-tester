@@ -23,7 +23,7 @@ const userSchema = new mongoose.Schema({
 });
 
 const User = mongoose.model("User", userSchema);
-app.post("/", (req, res) => {
+app.get("/", (req, res) => {
   res.status(200).json({ message: "all working okay" });
 });
 // Route to add a user
