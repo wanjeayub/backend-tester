@@ -23,7 +23,9 @@ const userSchema = new mongoose.Schema({
 });
 
 const User = mongoose.model("User", userSchema);
-
+app.post("/", (req, res) => {
+  res.status(200).json({ message: "all working okay" });
+});
 // Route to add a user
 app.post("/api/users", async (req, res) => {
   const { fullName, amount } = req.body;
